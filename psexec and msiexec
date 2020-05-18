@@ -1,0 +1,6 @@
+#Run 'command prompt' on remote computer -e will prevent loading of the domain user's profile on remote computer -s can be used to run 
+#program (cmd) with system account
+psexec -e \\192.168.0.109 -u "domain\user" -p "accountpassword"  cmd
+
+# Installing a program using psexec silently
+psexec -s msiexec.exe /i "D:\vlcnew.msi"
